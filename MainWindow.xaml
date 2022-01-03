@@ -1,0 +1,32 @@
+﻿<Window x:Class="w5Q8.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:w5Q8"
+        mc:Ignorable="d"
+        Title="Gestion de Processus" Height="450" Width="800" Loaded="WIndowsGestionProcessus_Loaded">
+    <Grid x:Name="GestionProcessus" HorizontalAlignment="Left" Width="772">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Button x:Name="LancerProcessus" Content="Lancer Processus" HorizontalAlignment="Left" Margin="657,89,0,0" VerticalAlignment="Top" Width="106" RenderTransformOrigin="-0.002,0.393" Click="LancerProcessus_Click"/>
+        <Button x:Name="Quitter" Content="Quitter" HorizontalAlignment="Left" Margin="668,393,0,0" VerticalAlignment="Top" Width="84" Click="Quitter_Click"/>
+        <Button x:Name="ArreterProcessus" Content="Arrêter Processus&#xD;&#xA;" HorizontalAlignment="Left" Margin="657,142,0,0" VerticalAlignment="Top" Width="106" Click="ArreterProcessus_Click" Height="24"/>
+        <TextBox x:Name="NomProcessBox" HorizontalAlignment="Left" Height="18" Margin="646,32,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="128"/>
+        <ListView x:Name="listView1" Margin="24,32,196,21" >
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="ID" DisplayMemberBinding="{Binding Id}" Width="100"/>
+                    <GridViewColumn Header="Nom Processus" DisplayMemberBinding="{Binding Name}" Width="200"/>
+                    <GridViewColumn Header="Priorité" DisplayMemberBinding="{Binding Priority}" Width="60"/>
+                    <GridViewColumn Header="Mémoire virtuelle" DisplayMemberBinding="{Binding VirtualMemory}" Width="143"/>
+                </GridView>
+            </ListView.View>
+            <Grid Height="100" Width="100"/>
+        </ListView>
+    </Grid>
+</Window>
